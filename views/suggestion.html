@@ -1,0 +1,14 @@
+		<div class="container">
+				<div class="comment_array">
+					<div class="comments" ng-repeat="comment in post.comments">
+						<h4>{{ comment.body }}</h4>
+						<span class="glyphicon glyphicon-plus-sign" ng-click="upVoteComment(comment)"></span> Upvotes: {{ comment.upvotes }}
+
+					</div>
+				</div>
+			<form ng-submit="addComment()">
+				<h2>Add a comment</h2>
+				<input type="text" placeholder="Comment" ng-model="new_comment" class="form-control">
+				<button class="btn btn-primary" type="submit"> To Add </button>
+			</form>
+		</div>
